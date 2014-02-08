@@ -1,0 +1,15 @@
+//
+//  AppDelegate.h
+//  Salebadger
+//
+//  Created by Lunayo on 08/02/2014.
+//  Copyright (c) 2014 Codebadge. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
