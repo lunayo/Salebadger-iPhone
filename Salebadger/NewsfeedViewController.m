@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Codebadge. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "NewsfeedViewController.h"
 
-@interface FirstViewController ()
+@interface NewsfeedViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation NewsfeedViewController
 
 - (void)viewDidLoad
 {

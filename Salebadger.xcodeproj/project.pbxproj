@@ -14,7 +14,7 @@
 		20AE4D3318A6FBF100D299D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D3218A6FBF100D299D4 /* main.m */; };
 		20AE4D3718A6FBF100D299D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D3618A6FBF100D299D4 /* AppDelegate.m */; };
 		20AE4D3A18A6FBF100D299D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AE4D3818A6FBF100D299D4 /* Main.storyboard */; };
-		20AE4D3D18A6FBF100D299D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D3C18A6FBF100D299D4 /* FirstViewController.m */; };
+		20AE4D3D18A6FBF100D299D4 /* NewsfeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D3C18A6FBF100D299D4 /* NewsfeedViewController.m */; };
 		20AE4D4018A6FBF100D299D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D3F18A6FBF100D299D4 /* SecondViewController.m */; };
 		20AE4D4218A6FBF100D299D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AE4D4118A6FBF100D299D4 /* Images.xcassets */; };
 		20AE4D4918A6FBF100D299D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AE4D4818A6FBF100D299D4 /* XCTest.framework */; };
@@ -46,8 +46,8 @@
 		20AE4D3518A6FBF100D299D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20AE4D3618A6FBF100D299D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20AE4D3918A6FBF100D299D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		20AE4D3B18A6FBF100D299D4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		20AE4D3C18A6FBF100D299D4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		20AE4D3B18A6FBF100D299D4 /* NewsfeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsfeedViewController.h; sourceTree = "<group>"; };
+		20AE4D3C18A6FBF100D299D4 /* NewsfeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsfeedViewController.m; sourceTree = "<group>"; };
 		20AE4D3E18A6FBF100D299D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		20AE4D3F18A6FBF100D299D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		20AE4D4118A6FBF100D299D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 				20AE4D3518A6FBF100D299D4 /* AppDelegate.h */,
 				20AE4D3618A6FBF100D299D4 /* AppDelegate.m */,
 				20AE4D3818A6FBF100D299D4 /* Main.storyboard */,
-				20AE4D3B18A6FBF100D299D4 /* FirstViewController.h */,
-				20AE4D3C18A6FBF100D299D4 /* FirstViewController.m */,
+				20AE4D3B18A6FBF100D299D4 /* NewsfeedViewController.h */,
+				20AE4D3C18A6FBF100D299D4 /* NewsfeedViewController.m */,
 				20AE4D3E18A6FBF100D299D4 /* SecondViewController.h */,
 				20AE4D3F18A6FBF100D299D4 /* SecondViewController.m */,
 				20AE4D4118A6FBF100D299D4 /* Images.xcassets */,
@@ -256,7 +256,7 @@
 			files = (
 				20AE4D4018A6FBF100D299D4 /* SecondViewController.m in Sources */,
 				20AE4D3718A6FBF100D299D4 /* AppDelegate.m in Sources */,
-				20AE4D3D18A6FBF100D299D4 /* FirstViewController.m in Sources */,
+				20AE4D3D18A6FBF100D299D4 /* NewsfeedViewController.m in Sources */,
 				20AE4D3318A6FBF100D299D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
