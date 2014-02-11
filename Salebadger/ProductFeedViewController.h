@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductFeedViewController : UIViewController
+@interface ProductFeedViewController : UITableViewController
 
 @end

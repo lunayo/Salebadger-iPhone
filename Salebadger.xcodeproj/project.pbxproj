@@ -22,6 +22,7 @@
 		20AE4D4B18A6FBF100D299D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AE4D2A18A6FBF100D299D4 /* UIKit.framework */; };
 		20AE4D5318A6FBF100D299D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20AE4D5118A6FBF100D299D4 /* InfoPlist.strings */; };
 		20AE4D5518A6FBF100D299D4 /* SalebadgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D5418A6FBF100D299D4 /* SalebadgerTests.m */; };
+		20AE4D6018A98AC500D299D4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D5F18A98AC500D299D4 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		20AE4D5018A6FBF100D299D4 /* SalebadgerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalebadgerTests-Info.plist"; sourceTree = "<group>"; };
 		20AE4D5218A6FBF100D299D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20AE4D5418A6FBF100D299D4 /* SalebadgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalebadgerTests.m; sourceTree = "<group>"; };
+		20AE4D5E18A98AC500D299D4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		20AE4D5F18A98AC500D299D4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				20AE4D3518A6FBF100D299D4 /* AppDelegate.h */,
 				20AE4D3618A6FBF100D299D4 /* AppDelegate.m */,
 				20AE4D3818A6FBF100D299D4 /* Main.storyboard */,
+				20AE4D5E18A98AC500D299D4 /* LoginViewController.h */,
+				20AE4D5F18A98AC500D299D4 /* LoginViewController.m */,
 				20AE4D3B18A6FBF100D299D4 /* ProductFeedViewController.h */,
 				20AE4D3C18A6FBF100D299D4 /* ProductFeedViewController.m */,
 				20AE4D3E18A6FBF100D299D4 /* SecondViewController.h */,
@@ -258,6 +263,7 @@
 				20AE4D3718A6FBF100D299D4 /* AppDelegate.m in Sources */,
 				20AE4D3D18A6FBF100D299D4 /* ProductFeedViewController.m in Sources */,
 				20AE4D3318A6FBF100D299D4 /* main.m in Sources */,
+				20AE4D6018A98AC500D299D4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

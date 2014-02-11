@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RTR-WV-Ppc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Product Feed View Controller - First-->
-        <scene sceneID="W3I-pn-N6e">
-            <objects>
-                <viewController title="First" id="CZ4-MO-1fc" customClass="ProductFeedViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xQE-kY-EOi"/>
-                        <viewControllerLayoutGuide type="bottom" id="H8n-h6-fh6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Salebadger" id="MWM-Rh-HN0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="763" y="-95"/>
-        </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
@@ -65,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763" y="556"/>
+            <point key="canvasLocation" x="439" y="80"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -83,7 +64,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="238"/>
+            <point key="canvasLocation" x="-608" y="-238"/>
         </scene>
         <!--Navigation Controller - Product Feed-->
         <scene sceneID="SXX-Qp-ueb">
@@ -97,12 +78,121 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="rootViewController" id="yyW-IM-3cs"/>
+                        <segue destination="r8H-tX-rgi" kind="relationship" relationship="rootViewController" id="afL-ke-ycp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9k-CK-pEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="-95"/>
+            <point key="canvasLocation" x="-87" y="-571"/>
+        </scene>
+        <!--Product Feed View Controller - Salebadger-->
+        <scene sceneID="DYN-rd-QxL">
+            <objects>
+                <tableViewController id="r8H-tX-rgi" customClass="ProductFeedViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V57-1b-5xj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XAq-qG-lpv">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAq-qG-lpv" id="32y-eV-Xua">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r8H-tX-rgi" id="e3w-J9-cN6"/>
+                            <outlet property="delegate" destination="r8H-tX-rgi" id="JUS-1F-gIw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Salebadger" id="5Xa-yf-n2x"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceB-Lu-c4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="-571"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="cWg-WZ-R8a">
+            <objects>
+                <viewController id="RTR-WV-Ppc" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Weu-YJ-mKe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yjw-SQ-FxX"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="ulJ-D9-iK9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biU-PM-MAu">
+                                <rect key="frame" x="20" y="264" width="280" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gJT-w4-3tH"/>
+                                    <constraint firstAttribute="width" constant="280" id="oJr-T1-6eJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email or phone number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-f1-5E4">
+                                <rect key="frame" x="20" y="228" width="280" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bXD-Q7-bf9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oML-zq-PwR">
+                                <rect key="frame" x="20" y="307" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="PpT-et-6Gb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginButtonDidTap:" destination="RTR-WV-Ppc" eventType="touchUpInside" id="dDW-d8-Zh1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSa-CI-0ae">
+                                <rect key="frame" x="20" y="514" width="280" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Hf9-tN-KvO"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign up for Salebadger"/>
+                                <connections>
+                                    <action selector="registerButtonDidTap:" destination="RTR-WV-Ppc" eventType="touchUpInside" id="cmW-jP-wrS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="biU-PM-MAu" secondAttribute="centerY" constant="2.5" id="2vx-ef-Mjx"/>
+                            <constraint firstItem="zzO-f1-5E4" firstAttribute="trailing" secondItem="biU-PM-MAu" secondAttribute="trailing" id="OD7-rt-Z6j"/>
+                            <constraint firstAttribute="centerX" secondItem="biU-PM-MAu" secondAttribute="centerX" id="UMI-qa-8Lf"/>
+                            <constraint firstAttribute="trailing" secondItem="LSa-CI-0ae" secondAttribute="trailing" constant="20" id="Wde-jR-I1r"/>
+                            <constraint firstItem="oML-zq-PwR" firstAttribute="leading" secondItem="biU-PM-MAu" secondAttribute="leading" id="aF2-92-GwR"/>
+                            <constraint firstItem="biU-PM-MAu" firstAttribute="top" secondItem="zzO-f1-5E4" secondAttribute="bottom" constant="1" id="cJ0-XL-p9d"/>
+                            <constraint firstItem="oML-zq-PwR" firstAttribute="top" secondItem="biU-PM-MAu" secondAttribute="bottom" constant="8" symbolic="YES" id="cW5-fD-Vib"/>
+                            <constraint firstItem="oML-zq-PwR" firstAttribute="trailing" secondItem="biU-PM-MAu" secondAttribute="trailing" id="hhS-e0-cDg"/>
+                            <constraint firstItem="LSa-CI-0ae" firstAttribute="leading" secondItem="ulJ-D9-iK9" secondAttribute="leading" constant="20" id="jmy-3P-vSv"/>
+                            <constraint firstItem="zzO-f1-5E4" firstAttribute="leading" secondItem="biU-PM-MAu" secondAttribute="leading" id="p5z-mt-NKb"/>
+                            <constraint firstItem="Yjw-SQ-FxX" firstAttribute="top" secondItem="LSa-CI-0ae" secondAttribute="bottom" constant="20" id="rss-4C-J3k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="biU-PM-MAu" id="6va-VL-FkS"/>
+                        <outlet property="usernameTextField" destination="zzO-f1-5E4" id="bpk-9y-BQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lNI-WQ-57S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608" y="416"/>
         </scene>
         <!--Navigation Controller - Second-->
         <scene sceneID="xxv-KX-qQM">
@@ -121,7 +211,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYn-ke-zb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="556"/>
+            <point key="canvasLocation" x="-87" y="80"/>
         </scene>
     </scenes>
     <resources>
