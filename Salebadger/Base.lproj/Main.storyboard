@@ -195,7 +195,7 @@
                                                 <state key="normal" title="Sign up for Salebadger"/>
                                                 <connections>
                                                     <action selector="registerButtonDidTap:" destination="S8P-bw-kNo" eventType="touchUpInside" id="7XD-zJ-KhU"/>
-                                                    <segue destination="8h8-8Y-ZRb" kind="modal" id="VbN-n4-kL5"/>
+                                                    <segue destination="E23-9n-ZXA" kind="modal" id="VbN-n4-kL5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -254,7 +254,7 @@
             </objects>
             <point key="canvasLocation" x="-1095" y="760"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register View Controller - Sign Up-->
         <scene sceneID="J17-Yc-9Cg">
             <objects>
                 <viewController id="8h8-8Y-ZRb" customClass="RegisterViewController" sceneMemberID="viewController">
@@ -263,12 +263,98 @@
                         <viewControllerLayoutGuide type="bottom" id="XeL-CN-a2t"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="beL-HG-hAu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKu-DX-uWV">
+                                <rect key="frame" x="20" y="77" width="280" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="xJS-Ex-CeX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s7T-C0-aRN">
+                                <rect key="frame" x="20" y="114" width="280" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UUd-5M-Ex0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password must be between 6-16 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-IW-7ny">
+                                <rect key="frame" x="23" y="157" width="277" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="spc-yV-gvM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your mobile number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngg-EA-vyI">
+                                <rect key="frame" x="67" y="22" width="233" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="lFb-yb-DJw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9o6-fQ-tT6">
+                                <rect key="frame" x="20" y="22" width="45" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="7Aw-ad-G7Q"/>
+                                    <constraint firstAttribute="height" constant="35" id="KZ3-fJ-VWe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aKu-DX-uWV" firstAttribute="trailing" secondItem="s7T-C0-aRN" secondAttribute="trailing" id="0sI-JU-jKV"/>
+                            <constraint firstItem="aKu-DX-uWV" firstAttribute="leading" secondItem="s7T-C0-aRN" secondAttribute="leading" id="9pJ-QA-RKT"/>
+                            <constraint firstItem="ngg-EA-vyI" firstAttribute="baseline" secondItem="9o6-fQ-tT6" secondAttribute="baseline" id="Fce-8m-UQJ"/>
+                            <constraint firstItem="ngg-EA-vyI" firstAttribute="top" secondItem="Aey-pi-tvb" secondAttribute="bottom" constant="22" id="GIS-v2-dLN"/>
+                            <constraint firstItem="s7T-C0-aRN" firstAttribute="trailing" secondItem="9hN-IW-7ny" secondAttribute="trailing" id="GcF-8F-zkU"/>
+                            <constraint firstItem="9hN-IW-7ny" firstAttribute="top" secondItem="s7T-C0-aRN" secondAttribute="bottom" constant="8" id="KXc-uW-ove"/>
+                            <constraint firstItem="9o6-fQ-tT6" firstAttribute="leading" secondItem="beL-HG-hAu" secondAttribute="leading" constant="20" id="Qcx-Xt-p7A"/>
+                            <constraint firstItem="ngg-EA-vyI" firstAttribute="leading" secondItem="9o6-fQ-tT6" secondAttribute="trailing" constant="2" id="Ws0-Lf-7Wl"/>
+                            <constraint firstItem="aKu-DX-uWV" firstAttribute="top" secondItem="ngg-EA-vyI" secondAttribute="bottom" constant="20" id="YAc-j2-mFM"/>
+                            <constraint firstItem="s7T-C0-aRN" firstAttribute="leading" secondItem="9hN-IW-7ny" secondAttribute="leading" constant="-3" id="cyM-l5-VjL"/>
+                            <constraint firstItem="s7T-C0-aRN" firstAttribute="top" secondItem="aKu-DX-uWV" secondAttribute="bottom" constant="2" id="lUf-2S-uUV"/>
+                            <constraint firstAttribute="trailing" secondItem="ngg-EA-vyI" secondAttribute="trailing" constant="20" id="oHy-8O-ohU"/>
+                            <constraint firstItem="aKu-DX-uWV" firstAttribute="leading" secondItem="9o6-fQ-tT6" secondAttribute="leading" id="wyg-zG-rTJ"/>
+                            <constraint firstItem="aKu-DX-uWV" firstAttribute="trailing" secondItem="ngg-EA-vyI" secondAttribute="trailing" id="xWp-R2-RwX"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="Igr-UB-UNz">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="y8d-L8-2Q2"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHn-Nh-p89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="760"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D7Y-eZ-2Si">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHi-XI-ROt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E23-9n-ZXA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="prA-DE-k5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8h8-8Y-ZRb" kind="relationship" relationship="rootViewController" id="pgB-06-AVX"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="-574" y="760"/>
         </scene>
