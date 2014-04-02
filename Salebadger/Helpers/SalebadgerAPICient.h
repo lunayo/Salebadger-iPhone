@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Codebadge. All rights reserved.
 //
 
-#import "AFRESTClient.h"
+#import "AFRestClient.h"
 
-@interface SalebadgerAPICient : AFRESTClient
+@interface SalebadgerAPICient : AFRESTClient <AFIncrementalStoreHTTPClient>
+
++ (SalebadgerAPICient *)sharedClient;
 
 @end
