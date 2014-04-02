@@ -10,6 +10,7 @@
 
 @interface SalebadgerAPICient : AFRESTClient <AFIncrementalStoreHTTPClient>
 
-+ (SalebadgerAPICient *)sharedClient;
++ (SalebadgerAPICient*)sharedClient;
+- (AFHTTPRequestOperation*)authenticateUserWithUsername:(NSString*)username password:(NSString*)password block:(void (^)(NSError* error))block;
 
 @end

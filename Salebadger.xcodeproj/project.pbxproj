@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		201F2A9818BFFF5700E0B7A2 /* SalebadgerAPICient.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F2A9718BFFF5700E0B7A2 /* SalebadgerAPICient.m */; };
+		2063E90718ECD31500E62EE1 /* SalebadgerAPIClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063E90618ECD31500E62EE1 /* SalebadgerAPIClientTest.m */; };
 		2099957118B9194B007CFDA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2099956518B9194B007CFDA8 /* AppDelegate.m */; };
 		2099957218B9194B007CFDA8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2099956818B9194B007CFDA8 /* LoginViewController.m */; };
 		2099957318B9194B007CFDA8 /* ProductFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2099956A18B9194B007CFDA8 /* ProductFeedViewController.m */; };
@@ -24,7 +25,6 @@
 		20AE4D4A18A6FBF100D299D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AE4D2618A6FBF100D299D4 /* Foundation.framework */; };
 		20AE4D4B18A6FBF100D299D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AE4D2A18A6FBF100D299D4 /* UIKit.framework */; };
 		20AE4D5318A6FBF100D299D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20AE4D5118A6FBF100D299D4 /* InfoPlist.strings */; };
-		20AE4D5518A6FBF100D299D4 /* SalebadgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AE4D5418A6FBF100D299D4 /* SalebadgerTests.m */; };
 		3845D183E93F4C4A9EDD6A4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA6FCC8E493404899D6BF3F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,7 @@
 /* Begin PBXFileReference section */
 		201F2A9618BFFF5700E0B7A2 /* SalebadgerAPICient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalebadgerAPICient.h; sourceTree = "<group>"; };
 		201F2A9718BFFF5700E0B7A2 /* SalebadgerAPICient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalebadgerAPICient.m; sourceTree = "<group>"; };
+		2063E90618ECD31500E62EE1 /* SalebadgerAPIClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalebadgerAPIClientTest.m; sourceTree = "<group>"; };
 		2099956418B9194B007CFDA8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2099956518B9194B007CFDA8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2099956718B9194B007CFDA8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		20AE4D4818A6FBF100D299D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		20AE4D5018A6FBF100D299D4 /* SalebadgerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalebadgerTests-Info.plist"; sourceTree = "<group>"; };
 		20AE4D5218A6FBF100D299D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		20AE4D5418A6FBF100D299D4 /* SalebadgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalebadgerTests.m; sourceTree = "<group>"; };
 		4AA6FCC8E493404899D6BF3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74381D40DAEC4D04BCFC80D9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2063E90518ECD2F600E62EE1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2063E90618ECD31500E62EE1 /* SalebadgerAPIClientTest.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2099956318B9194B007CFDA8 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +203,7 @@
 		20AE4D4E18A6FBF100D299D4 /* SalebadgerTests */ = {
 			isa = PBXGroup;
 			children = (
-				20AE4D5418A6FBF100D299D4 /* SalebadgerTests.m */,
+				2063E90518ECD2F600E62EE1 /* Helpers */,
 				20AE4D4F18A6FBF100D299D4 /* Supporting Files */,
 			);
 			path = SalebadgerTests;
@@ -356,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AE4D5518A6FBF100D299D4 /* SalebadgerTests.m in Sources */,
+				2063E90718ECD31500E62EE1 /* SalebadgerAPIClientTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
