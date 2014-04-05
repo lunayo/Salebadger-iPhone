@@ -13,7 +13,7 @@ static NSString* const kSalebadgerAPIBaseURLString =
 
 @implementation SalebadgerAPICient
 
-+ (SalebadgerAPICient*)sharedClient
++ (instancetype)sharedClient
 {
     static SalebadgerAPICient* _sharedClient = nil;
     static dispatch_once_t onceToken;
@@ -34,30 +34,30 @@ static NSString* const kSalebadgerAPIBaseURLString =
 
     [self setRequestSerializer:[AFHTTPRequestSerializer serializer]];
     [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    // Remove this code when deploying to production
+    [[self securityPolicy] setAllowInvalidCertificates:YES];
 
     return self;
 }
 
 #pragma mark - Salebadger API
 
-- (AFHTTPRequestOperation*)authenticateUserWithUsername:(NSString*)username
+- (NSURLSessionDataTask*)authenticateUserWithUsername:(NSString*)username
                                          password:(NSString*)password
                                             block:(void (^)(NSError*))block
 {
     [[self requestSerializer] setAuthorizationHeaderFieldWithUsername:username
                                                              password:password];
-    return [self GET:@"auth/basic" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // it should return no response
+    return [self GET:@"auth/basic" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        // response containts no content
         if (block) {
             block(nil);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (block) {
             block(error);
         }
     }];
 }
-
-#pragma mark - AFIncrementalStore
 
 @end

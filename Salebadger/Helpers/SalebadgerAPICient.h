@@ -6,11 +6,13 @@
 //  Copyright (c) 2014 Codebadge. All rights reserved.
 //
 
-#import "AFRestClient.h"
+#import "AFNetworking.h"
 
-@interface SalebadgerAPICient : AFRESTClient <AFIncrementalStoreHTTPClient>
+@interface SalebadgerAPICient : AFHTTPSessionManager
 
-+ (SalebadgerAPICient*)sharedClient;
-- (AFHTTPRequestOperation*)authenticateUserWithUsername:(NSString*)username password:(NSString*)password block:(void (^)(NSError* error))block;
++ (instancetype)sharedClient;
+- (NSURLSessionDataTask*)authenticateUserWithUsername:(NSString*)username
+                                             password:(NSString*)password
+                                                block:(void (^)(NSError* error))block;
 
 @end
