@@ -7,15 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SalebadgerAPICient.h"
+#import "SBAPIClient.h"
 
-@interface SalebadgerAPIClientTest : XCTestCase
+@interface SBAPIClientTest : XCTestCase
 
 @property(nonatomic, strong) dispatch_semaphore_t semaphore;
 
 @end
 
-@implementation SalebadgerAPIClientTest
+@implementation SBAPIClientTest
 
 - (void)setUp
 {
@@ -56,7 +56,7 @@
     NSString* password = @"qwertyui";
     __block NSError* errorResult;
     NSURLSessionDataTask* task =
-        [[SalebadgerAPICient sharedClient] authenticateUserWithUsername:username
+        [[SBAPIClient sharedClient] authenticateUserWithUsername:username
                                                            password:password
                                                               block:^ (NSError * error)
     {
@@ -80,7 +80,7 @@
     NSString* password = @"random";
     __block NSError* errorResult;
     NSURLSessionDataTask* task =
-    [[SalebadgerAPICient sharedClient] authenticateUserWithUsername:username
+    [[SBAPIClient sharedClient] authenticateUserWithUsername:username
                                                            password:password
                                                               block:^ (NSError * error)
      {

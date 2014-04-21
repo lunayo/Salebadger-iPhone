@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 Codebadge. All rights reserved.
 //
 
-#import "SalebadgerAPICient.h"
+#import "SBAPIClient.h"
 
 static NSString* const kSalebadgerAPIBaseURLString =
     @"https://api.codebadge.com/v1/";
 
-@implementation SalebadgerAPICient
+@implementation SBAPIClient
 
 + (instancetype)sharedClient
 {
-    static SalebadgerAPICient* _sharedClient = nil;
+    static SBAPIClient* _sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-    _sharedClient = [[SalebadgerAPICient alloc]
+    _sharedClient = [[SBAPIClient alloc]
         initWithBaseURL:[NSURL URLWithString:kSalebadgerAPIBaseURLString]];
     });
 

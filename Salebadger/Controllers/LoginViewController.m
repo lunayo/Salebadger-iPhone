@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "SBKeychainManager.h"
+#import "SBAPIClient.h"
 
 @interface LoginViewController ()
 
@@ -14,9 +16,10 @@
 
 @implementation LoginViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -28,12 +31,13 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
-                                                 name:UIKeyboardWillShowNotification object:nil];
-    
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillHide:)
-                                                 name:UIKeyboardWillHideNotification object:nil];
-    
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 #pragma mark - UIKeyboard Notifications
@@ -41,13 +45,15 @@
 - (void)keyboardWillShow:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
-    CGRect kbRect = [self.view convertRect:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue] fromView:nil];
+    CGRect kbRect = [self.view convertRect:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue]
+                                  fromView:nil];
     CGSize kbSize = kbRect.size;
-    
+
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     [_scrollView setContentInset:contentInsets];
     [_scrollView setScrollIndicatorInsets:contentInsets];
-    [_scrollView scrollRectToVisible:[_loginButton frame] animated:YES];
+    [_scrollView scrollRectToVisible:[_loginButton frame]
+                            animated:YES];
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -59,7 +65,8 @@
 }
 
 #pragma mark - UIView User Interaction
-- (IBAction)contentViewShouldReceiveToTouch:(UITapGestureRecognizer *)sender {
+- (IBAction)contentViewShouldReceiveToTouch:(UITapGestureRecognizer*)sender
+{
     [self.view endEditing:YES];
 }
 
@@ -67,7 +74,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     [self registerForKeyboardNotifications];
 }
 
@@ -79,9 +86,32 @@
 
 #pragma mark - Button Handlers
 
-- (IBAction)loginButtonDidTap:(id)sender {
+- (IBAction)loginButtonDidTap:(id)sender
+{
+    // Get the username and password from the text field
+    NSString* username = [_usernameTextField text];
+    NSString* password = [_passwordTextField text];
+
+    if (!username || username.length == 0 || !password || password.length == 0) {
+        return;
+    }
+
+    // Call the api login with the username and password
+    [[SBAPIClient sharedClient] authenticateUserWithUsername:username password:password block:^(NSError *error)
+    {
+        if (!error) {
+            // Save credential to the keychain
+            [[SBKeychainManager sharedClient] saveSalebadgerUserCredentialsWithUsername:username
+                                                                               password:password];
+            // Dismiss login view controller
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            NSLog(@"Invalid credentials: %@", [error localizedDescription]);
+        }
+    }];
 }
 
-- (IBAction)registerButtonDidTap:(id)sender {
+- (IBAction)registerButtonDidTap:(id)sender
+{
 }
 @end

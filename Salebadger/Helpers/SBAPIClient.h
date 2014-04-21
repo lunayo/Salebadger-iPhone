@@ -8,7 +8,7 @@
 
 #import "AFNetworking.h"
 
-@interface SalebadgerAPICient : AFHTTPSessionManager
+@interface SBAPIClient : AFHTTPSessionManager
 
 + (instancetype)sharedClient;
 - (NSURLSessionDataTask*)authenticateUserWithUsername:(NSString*)username
