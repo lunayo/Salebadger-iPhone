@@ -66,11 +66,11 @@
             </objects>
             <point key="canvasLocation" x="-1095" y="-216"/>
         </scene>
-        <!--Navigation Controller - Product Feed-->
+        <!--Navigation Controller - Products Feed-->
         <scene sceneID="SXX-Qp-ueb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MzH-YH-PSa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Product Feed" image="first" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" title="Products Feed" image="first" id="u1e-5L-l1D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Atq-MW-iB7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -93,9 +93,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="IJa-vc-P3z">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XAq-qG-lpv">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAq-qG-lpv" id="32y-eV-Xua">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -108,11 +113,49 @@
                             <outlet property="delegate" destination="r8H-tX-rgi" id="JUS-1F-gIw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Salebadger" id="5Xa-yf-n2x"/>
+                    <navigationItem key="navigationItem" title="Salebadger" id="5Xa-yf-n2x">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Lu2-6m-fFE">
+                            <connections>
+                                <segue destination="kfh-LU-acl" kind="modal" id="esu-Ty-wSB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="feG-b6-Xb0" id="ANK-eR-iHT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceB-Lu-c4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="feG-b6-Xb0">
+                    <connections>
+                        <outlet property="delegate" destination="r8H-tX-rgi" id="C1f-kw-Epe"/>
+                        <outlet property="searchContentsController" destination="r8H-tX-rgi" id="m0t-bE-652"/>
+                        <outlet property="searchResultsDataSource" destination="r8H-tX-rgi" id="ZvZ-lh-bjs"/>
+                        <outlet property="searchResultsDelegate" destination="r8H-tX-rgi" id="Obf-w5-tDa"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-48" y="-549"/>
+        </scene>
+        <!--Add Product View Controller - Product-->
+        <scene sceneID="ftl-ID-5fz">
+            <objects>
+                <viewController id="S9d-ER-5iO" customClass="AddProductViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rJc-rw-29F"/>
+                        <viewControllerLayoutGuide type="bottom" id="NaT-5V-r4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fvj-QD-Fro">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Product" id="nqi-u1-wPe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="QMV-sf-0Qw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sz-4y-hoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="-549"/>
         </scene>
         <!--Navigation Controller - Second-->
         <scene sceneID="xxv-KX-qQM">
@@ -194,7 +237,6 @@
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Sign up for Salebadger"/>
                                                 <connections>
-                                                    <action selector="registerButtonDidTap:" destination="S8P-bw-kNo" eventType="touchUpInside" id="7XD-zJ-KhU"/>
                                                     <segue destination="E23-9n-ZXA" kind="modal" id="VbN-n4-kL5"/>
                                                 </connections>
                                             </button>
@@ -357,6 +399,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHi-XI-ROt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-574" y="760"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0f3-jI-cdW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kfh-LU-acl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RwZ-AW-6Hi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S9d-ER-5iO" kind="relationship" relationship="rootViewController" id="QYj-2n-rXz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMM-Yh-pps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="-549"/>
         </scene>
     </scenes>
     <resources>

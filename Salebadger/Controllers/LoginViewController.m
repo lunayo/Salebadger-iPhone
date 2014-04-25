@@ -111,7 +111,4 @@
     }];
 }
 
-- (IBAction)registerButtonDidTap:(id)sender
-{
-}
 @end

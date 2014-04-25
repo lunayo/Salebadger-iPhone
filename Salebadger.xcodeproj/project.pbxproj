@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		201F2A9818BFFF5700E0B7A2 /* SBAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 201F2A9718BFFF5700E0B7A2 /* SBAPIClient.m */; };
+		2038EEED190B17F4004AFF76 /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2038EEEC190B17F4004AFF76 /* AddProductViewController.m */; };
 		2063E90718ECD31500E62EE1 /* SBAPIClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063E90618ECD31500E62EE1 /* SBAPIClientTest.m */; };
 		20686A7D18F1F54600AD9630 /* SBKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20686A7C18F1F54600AD9630 /* SBKeychainManager.m */; };
 		2099957118B9194B007CFDA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2099956518B9194B007CFDA8 /* AppDelegate.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		201F2A9618BFFF5700E0B7A2 /* SBAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAPIClient.h; sourceTree = "<group>"; };
 		201F2A9718BFFF5700E0B7A2 /* SBAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAPIClient.m; sourceTree = "<group>"; };
+		2038EEEB190B17F4004AFF76 /* AddProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductViewController.h; sourceTree = "<group>"; };
+		2038EEEC190B17F4004AFF76 /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
 		2063E90618ECD31500E62EE1 /* SBAPIClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAPIClientTest.m; sourceTree = "<group>"; };
 		20686A7B18F1F54600AD9630 /* SBKeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBKeychainManager.h; sourceTree = "<group>"; };
 		20686A7C18F1F54600AD9630 /* SBKeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBKeychainManager.m; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				2099956C18B9194B007CFDA8 /* RegisterViewController.m */,
 				2099956D18B9194B007CFDA8 /* SecondViewController.h */,
 				2099956E18B9194B007CFDA8 /* SecondViewController.m */,
+				2038EEEB190B17F4004AFF76 /* AddProductViewController.h */,
+				2038EEEC190B17F4004AFF76 /* AddProductViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 			files = (
 				2099957518B9194B007CFDA8 /* SecondViewController.m in Sources */,
 				2099957418B9194B007CFDA8 /* RegisterViewController.m in Sources */,
+				2038EEED190B17F4004AFF76 /* AddProductViewController.m in Sources */,
 				2099957118B9194B007CFDA8 /* AppDelegate.m in Sources */,
 				20686A7D18F1F54600AD9630 /* SBKeychainManager.m in Sources */,
 				20AE4D3318A6FBF100D299D4 /* main.m in Sources */,

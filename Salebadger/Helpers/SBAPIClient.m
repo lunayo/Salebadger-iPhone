@@ -32,8 +32,9 @@ static NSString* const kSalebadgerAPIBaseURLString =
         return nil;
     }
 
-    [self setRequestSerializer:[AFHTTPRequestSerializer serializer]];
+    [self setRequestSerializer:[AFJSONRequestSerializer serializer]];
     [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [[self responseSerializer] setAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
     // Remove this code when deploying to production
     [[self securityPolicy] setAllowInvalidCertificates:YES];
 
